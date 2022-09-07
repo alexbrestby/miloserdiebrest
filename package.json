@@ -11,5 +11,8 @@
   "devDependencies": {
     "sass": "^1.54.8",
     "vite": "^3.1.0"
+  },
+  "dependencies": {
+    "tiny-slider": "^2.9.4"
   }
 }

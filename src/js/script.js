@@ -11,3 +11,17 @@ wrapper.appendChild(footer);
 
 const app = document.querySelector("#app");
 app.appendChild(wrapper);
+
+
+const slider = tns({
+    container: '.slider',
+    axis: "horisontal",
+    items: 4,
+    controls: true,
+    controlsContainer: false,
+    navPosition: "bottom",
+    autoplayText: false,
+    autoplay: false,
+});
+
+console.log(slider);
