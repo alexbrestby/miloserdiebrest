@@ -14,20 +14,37 @@
     width: 100%
     padding: 0 20px
 
-.nav-header__h1,
-.nav-header__p
+.logo
+    display: flex
+    justify-content: space-between
+    a
+        margin-left: rem(10)
+
+.logo__brand
+    display: flex
+    flex-direction: column
+    @media screen and (max-width: 932px)
+        justify-content: center
+
+.logo__brand-h1,
+.logo__brand-p
     margin: 0
     padding: 0
     color: #ffffff
     font-weight: 300
 
-.nav-header__h1
+.logo__brand-h1
     text-transform: uppercase
     font-size: rem(24)
+    @media screen and (max-width: 840px)
+        display: none
 
-.nav-header__p
+.logo__brand-p
     font-family: $open-sans
     font-weight: 200
+    min-width: max-content
+    @media screen and (max-width: 932px)
+        display: none
 
 .nav-list
     display: flex
@@ -44,16 +61,6 @@
             &:hover
                 color: #f2bf5e
                 cursor: pointer
-
-.nav-logo
-    position: relative
-    overflow: hidden
-    width: rem(40)
-    height: rem(40)
-    margin-top: rem(5)
-
-.nav-logo__img
-    position: absolute
-    max-width: 100%
+.logo__img
+    object-fit: contain
     max-height: 100%
-    object-fit: cover
