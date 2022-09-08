@@ -7,7 +7,7 @@ mainTop.classList.add("main-top");
 const mainTopSlider = document.createElement("div");
 mainTopSlider.classList.add("main-top__slider", "slider");
 
-const sliderImagesArray = ["slide_0", "slide_1", "slide_2", "slide_3"]
+const sliderImagesArray = ["slide_1", "slide_2", "slide_3", "slide_4"]
 
 for (let i = 0; i < 4; i++) {
     let sliderItem = document.createElement("div");

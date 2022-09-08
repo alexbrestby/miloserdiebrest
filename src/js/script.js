@@ -18,5 +18,10 @@ $(document).ready(function () {
         autoplay: false,
         // arrows: false,
         slidesToShow: 1,
+        dots: true,
+  infinite: true,
+  speed: 500,
+  fade: true,
+  cssEase: 'linear'
     });
 });
