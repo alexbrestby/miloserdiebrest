@@ -13,15 +13,10 @@ const app = document.querySelector("#app");
 app.appendChild(wrapper);
 
 
-const slider = tns({
-    container: '.slider',
-    axis: "horisontal",
-    items: 4,
-    controls: true,
-    controlsContainer: false,
-    navPosition: "bottom",
-    autoplayText: false,
-    autoplay: false,
+$(document).ready(function () {
+    $('.slider').slick({
+        autoplay: false,
+        // arrows: false,
+        slidesToShow: 1,
+    });
 });
-
-console.log(slider);
