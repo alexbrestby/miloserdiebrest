@@ -2,7 +2,7 @@
 export default {
     // config options
     build: {
-        minify: false,
+        minify: true,
     },
     css: {
         devSourcemap: true,

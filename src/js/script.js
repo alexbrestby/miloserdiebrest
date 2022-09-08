@@ -12,16 +12,14 @@ wrapper.appendChild(footer);
 const app = document.querySelector("#app");
 app.appendChild(wrapper);
 
-
 $(document).ready(function () {
     $('.slider').slick({
-        autoplay: false,
-        // arrows: false,
+        autoplay: true,
         slidesToShow: 1,
-        dots: true,
-  infinite: true,
-  speed: 500,
-  fade: true,
-  cssEase: 'linear'
+        infinite: true,
+        speed: 750,
+        fade: true,
+        cssEase: 'linear',
     });
+ 
 });
