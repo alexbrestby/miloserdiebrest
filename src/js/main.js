@@ -22,11 +22,6 @@ for (let i = 0; i < 4; i++) {
 const mainTopContacts = document.createElement("div");
 mainTopContacts.classList.add("main-top__contacts", "main-contacts");
 
-// const mainTopMotto = document.createElement("div");
-// mainTopMotto.classList.add("main-contacts__motto");
-// mainTopMotto.innerHTML = `радость умножается делением`;
-// mainTopContacts.appendChild(mainTopMotto);
-
 const mainTopInfo = document.createElement("div");
 mainTopInfo.classList.add("main-contacts__info");
 
