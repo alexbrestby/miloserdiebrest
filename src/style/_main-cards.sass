@@ -10,17 +10,18 @@
   position: relative
   align-items: center
   width: 100%
-
-.slick-arrow
-  border-radius: 50%
-  background-color: #ffffff
-  transition: all 0.5s ease-out
-  &:hover
-    cursor: pointer
-    transform: scale(1.2)
-    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px
+  .slick-arrow
+    border-radius: 50%
+    background-color: #ffffff
     transition: all 0.5s ease-out
-    background-color: #2b6ca3
+    @media screen and (max-width: 768px)
+      display: none!important
+    &:hover
+      cursor: pointer
+      transform: scale(1.2)
+      box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px
+      transition: all 0.5s ease-out
+      background-color: #2b6ca3
 
 .cards-slider__item
   display: flex
@@ -46,3 +47,4 @@
     margin-top: rem(30)
     color: #2b6ca3
     text-transform: uppercase
+    font-size: 1.25em
