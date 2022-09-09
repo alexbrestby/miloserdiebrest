@@ -13,13 +13,12 @@ const app = document.querySelector("#app");
 app.appendChild(wrapper);
 
 $(document).ready(function () {
-    $('.slider').slick({
-        autoplay: true,
-        slidesToShow: 1,
-        infinite: true,
-        speed: 750,
-        fade: true,
-        cssEase: 'linear',
-    });
- 
+  $('.slider').slick({
+    autoplay: true,
+    slidesToShow: 1,
+    infinite: true,
+    speed: 1500,
+    fade: true,
+    cssEase: 'linear',
+  });
 });

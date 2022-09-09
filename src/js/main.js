@@ -10,22 +10,22 @@ mainTopSlider.classList.add("main-top__slider", "slider");
 const sliderImagesArray = ["slide_1", "slide_2", "slide_3", "slide_4"]
 
 for (let i = 0; i < 4; i++) {
-    let sliderItem = document.createElement("div");
-    sliderItem.classList.add("slider__item");
-    let sliderImage = document.createElement("img");
-    sliderImage.src = `assets/images/${sliderImagesArray[i]}.jpg`;
-    sliderImage.alt = sliderImagesArray[i];
-    sliderItem.appendChild(sliderImage);
-    mainTopSlider.appendChild(sliderItem);
+  let sliderItem = document.createElement("div");
+  sliderItem.classList.add("slider__item");
+  let sliderImage = document.createElement("img");
+  sliderImage.src = `assets/images/${sliderImagesArray[i]}.jpg`;
+  sliderImage.alt = sliderImagesArray[i];
+  sliderItem.appendChild(sliderImage);
+  mainTopSlider.appendChild(sliderItem);
 }
 
 const mainTopContacts = document.createElement("div");
 mainTopContacts.classList.add("main-top__contacts", "main-contacts");
 
-const mainTopMotto = document.createElement("div");
-mainTopMotto.classList.add("main-contacts__motto");
-mainTopMotto.innerHTML = `радость умножается делением`;
-mainTopContacts.appendChild(mainTopMotto);
+// const mainTopMotto = document.createElement("div");
+// mainTopMotto.classList.add("main-contacts__motto");
+// mainTopMotto.innerHTML = `радость умножается делением`;
+// mainTopContacts.appendChild(mainTopMotto);
 
 const mainTopInfo = document.createElement("div");
 mainTopInfo.classList.add("main-contacts__info");
