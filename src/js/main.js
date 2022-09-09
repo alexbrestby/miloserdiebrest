@@ -1,3 +1,5 @@
+import { mainCards } from './main-cards'
+
 const main = document.createElement("div");
 main.classList.add("main");
 
@@ -66,6 +68,7 @@ mainTop.appendChild(mainTopSlider);
 mainTop.appendChild(mainTopContacts);
 
 main.appendChild(mainTop);
+main.appendChild(mainCards);
 
 export { main };
 
