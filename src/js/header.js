@@ -9,7 +9,7 @@ logoLink.href = `https://miloserdiebrest.com`;
 
 const logoImg = document.createElement("img");
 logoImg.classList.add("logo__img");
-logoImg.src = `assets/images/miloserdie_logo.jpg`;
+logoImg.src = `assets/images/logo.jpg`;
 logoLink.appendChild(logoImg)
 logo.appendChild(logoLink);
 
@@ -41,16 +41,16 @@ nav.appendChild(navUl);
 const navArray = ["О службе", "Помощь бездомным", "Как помочь", "Попросить о помощи"]
 
 for (let i = 0; i < 4; i++) {
-    let navLi = document.createElement("li");
-    navLi.classList.add("nav-item");
+  let navLi = document.createElement("li");
+  navLi.classList.add("nav-item");
 
-    let navLink = document.createElement("a");
-    navLink.classList.add("nav-link");
-    navLink.href = `#`;
-    navLink.innerHTML = navArray[i];
+  let navLink = document.createElement("a");
+  navLink.classList.add("nav-link");
+  navLink.href = `#`;
+  navLink.innerHTML = navArray[i];
 
-    navLi.appendChild(navLink);
-    navUl.appendChild(navLi);
+  navLi.appendChild(navLink);
+  navUl.appendChild(navLi);
 }
 
 header.appendChild(nav);
