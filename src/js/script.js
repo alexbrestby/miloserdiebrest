@@ -37,7 +37,7 @@ $(document).ready(function () {
     prevArrow: '<i class="fa-solid fa-circle-arrow-left fa-2x"></i>',
     infinite: true,
     speed: 300,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     responsive: [
       {
