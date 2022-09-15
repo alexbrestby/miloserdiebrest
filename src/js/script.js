@@ -1,15 +1,22 @@
 import '../style/style.sass'
 import { header } from './header'
-import { main } from './main'
+import { mainPage } from './pages/main-page'
+import { helpHomeless } from './pages/help-homeless';
+import { aboutPage } from './pages/about';
+import { howToHelp } from './pages/how-help';
+import { askForHelp } from './pages/ask-help';
+import { errorPage } from './pages/error';
 import { footer } from './footer';
+
+const app = document.querySelector("#app");
 
 const wrapper = document.createElement("div");
 wrapper.classList.add("wrapper");
+
 wrapper.appendChild(header);
-wrapper.appendChild(main);
+wrapper.append(router(document.location.pathname.slice(1)));
 wrapper.appendChild(footer);
 
-const app = document.querySelector("#app");
 app.appendChild(wrapper);
 
 $(document).ready(function () {
@@ -21,14 +28,6 @@ $(document).ready(function () {
     fade: true,
     cssEase: 'linear',
   });
-
-  // $('.cards-slider').slick({
-  //   autoplay: false,
-  //   slidesToShow: 3,
-  //   arrows: true,
-  //   prevArrow: '<button class="slide-arrow prev-arrow"></button>',
-  //   nextArrow: '<button class="slide-arrow next-arrow"></button>'
-  // });
 
   $('.cards-slider').slick({
     dots: false,
@@ -66,3 +65,28 @@ $(document).ready(function () {
       }]
   });
 });
+
+function router(pagePath) {
+  let result = ''
+  switch (pagePath) {
+    case '':
+      result = mainPage;
+      break;
+    case 'about':
+      result = aboutPage;
+      break;
+    case 'help-homeless':
+      result = helpHomeless;
+      break;
+    case 'how-to-help':
+      result = howToHelp;
+      break;
+    case 'ask-for-help':
+      result = askForHelp;
+      break;
+    default:
+      result = errorPage;
+      break;
+  }
+  return result;
+}

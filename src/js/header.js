@@ -39,6 +39,7 @@ navUl.classList.add("nav-list");
 nav.appendChild(navUl);
 
 const navArray = ["О службе", "Помощь бездомным", "Как помочь", "Попросить о помощи"]
+const navArrayLinks = ["about", "help-homeless", "how-to-help", "ask-for-help"]
 
 for (let i = 0; i < 4; i++) {
   let navLi = document.createElement("li");
@@ -46,7 +47,7 @@ for (let i = 0; i < 4; i++) {
 
   let navLink = document.createElement("a");
   navLink.classList.add("nav-link");
-  navLink.href = `#`;
+  navLink.href = `/${navArrayLinks[i]}`;
   navLink.innerHTML = navArray[i];
 
   navLi.appendChild(navLink);

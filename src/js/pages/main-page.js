@@ -1,7 +1,7 @@
 import { mainCards } from './main-cards'
 
-const main = document.createElement("div");
-main.classList.add("main");
+const mainPage = document.createElement("div");
+mainPage.classList.add("main-page");
 
 const mainTop = document.createElement("div");
 mainTop.classList.add("main-top");
@@ -63,13 +63,12 @@ mainTopInfoCoordinator.appendChild(mainTopInfoCoordinatorPhone2);
 mainTopInfo.appendChild(mainTopInfoCoordinator);
 mainTopContacts.appendChild(mainTopInfo);
 
-
 mainTop.appendChild(mainTopSlider);
 mainTop.appendChild(mainTopContacts);
 
-main.appendChild(mainTop);
-main.appendChild(mainCards);
+mainPage.appendChild(mainTop);
+mainPage.appendChild(mainCards);
 
-export { main };
+export { mainPage };
 
 
