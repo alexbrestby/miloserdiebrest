@@ -47,7 +47,7 @@ for (let i = 0; i < 4; i++) {
 
   let navLink = document.createElement("a");
   navLink.classList.add("nav-link");
-  navLink.href = `/${navArrayLinks[i]}`;
+  navLink.href = `?${navArrayLinks[i]}`;
   navLink.innerHTML = navArray[i];
 
   navLi.appendChild(navLink);

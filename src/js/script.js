@@ -14,7 +14,11 @@ const wrapper = document.createElement("div");
 wrapper.classList.add("wrapper");
 
 wrapper.appendChild(header);
-wrapper.append(router(document.location.pathname.slice(1)));
+// wrapper.append(router(document.location.pathname.slice(1)));
+
+//for deploy version
+wrapper.append(router(document.location.search.slice(1)));
+
 wrapper.appendChild(footer);
 
 app.appendChild(wrapper);
