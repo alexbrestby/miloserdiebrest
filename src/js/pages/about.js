@@ -45,7 +45,22 @@ aboutPageRow2.appendChild(aboutPageText);
 aboutPageRow2.appendChild(aboutPageImgBusWrapper);
 aboutPage.appendChild(aboutPageRow2);
 
+const aboutPageRow3 = document.createElement("div");
+aboutPageRow3.classList.add("row-3");
 
+const aboutPageText1 = document.createElement("div");
+aboutPageText1.classList.add("about-text");
+aboutPageText1.innerHTML = `<p>Мы считаем крайне важным видеть в каждом из наших подопечных человека, нуждающегося в помощи, а не представителя «социального слоя» или пример «социальной проблемы». Часто работа с подопечным строится на совместном вырабатывании индивидуального плана выхода из кризисной ситуации и последовательном его выполнении. Мы понимаем, что даже такой большой организации, как наша, не под силу изменить весь мир. Но мы точно знаем, что можем оказать реальную помощь десяткам людей, и стремимся к этому..</p><p>На 80% наша служба  существует на пожертвования, поэтому судьба всех, кому мы помогаем, зависит от того, насколько регулярно поступают средства от благотворителей. Сегодня у нас около 70 постоянных подопечных - тех, о ком мы заботимся из года в год. </p>`;
 
+const aboutPageImgPigeonsWrapper = document.createElement("div");
+aboutPageImgPigeonsWrapper.classList.add("img-wrapper");
+const aboutPageImgPigeons = document.createElement("img");
+aboutPageImgPigeons.src = `assets/images/slide_21.jpg`;
+aboutPageImgPigeons.alt = 'slide_21';
+aboutPageImgPigeonsWrapper.appendChild(aboutPageImgPigeons);
+
+aboutPageRow3.appendChild(aboutPageImgPigeonsWrapper);
+aboutPageRow3.appendChild(aboutPageText1);
+aboutPage.appendChild(aboutPageRow3);
 
 export { aboutPage }
