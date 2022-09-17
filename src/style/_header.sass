@@ -4,16 +4,44 @@
   height: rem(50)
   padding: rem(10)
   background-color: #2b6ca3
+  @media screen and (max-width: 767px)
+    position: fixed
+    top: 0
+    left: 0
+    width: calc(100% - rem(20))
+    &::before
+      content: ""
+      position: fixed
+      top: 0
+      left: 0
+      height: rem(50)
+      width: calc(100% - rem(20))
+      padding: rem(10)
+      z-index: 5
+      border-bottom: 3px solid #2b6ca3
 
 .nav
   display: flex
   justify-content: space-between
   width: 100%
   padding: 0 20px
+  transition: all 1s ease
+  @media screen and (max-width: 767px)
+    transform: translate(100%, 0)
+    position: fixed
+    top: 0
+    left: 0
+    width: calc(100% - rem(60))
+    height: 100%
+    background-color: rgba(250, 250, 250, 1)
+    padding: rem(100) rem(30) rem(30)
+  &._active
+    transform: translate(0, 0)
 
 .logo
   display: flex
   justify-content: space-between
+  z-index: 5
   a
     padding-left: rem(10)
 
@@ -35,8 +63,14 @@
   font-weight: 500
   text-transform: uppercase
   font-size: rem(24)
-  @media screen and (max-width: 840px)
+  transition: all 1s ease
+  @media screen and (max-width: 840px) and (min-width: 768px)
     display: none
+  @media screen and (max-width: 767px)
+    color: #fafafa
+    margin-left: rem(15)
+  &._active
+    color: #2b6ca3
 
 .logo__brand-p
   font-family: $open-sans
@@ -50,15 +84,77 @@
   width: 100%
   justify-content: space-evenly
   list-style: none
+  @media screen and (max-width: 767px)
+    flex-direction: column
+    justify-content: flex-start
+    padding: rem(10)
   .nav-item
+    max-width: 100%
+    @media screen and (max-width: 767px)
+      width: 100%
+      text-transform: uppercase
+      font-size: 1.8em
+      margin-bottom: rem(20)
+      text-align: right
     .nav-link
       text-decoration: none
       color: #ffffff
       font-size: rem(15)
       font-weight: 500
+      @media screen and (max-width: 767px)
+        color: #2b6ca3
+        border-bottom: 3px solid #f2bf5e
       &:hover
         color: #f2bf5e
+        border-bottom: 3px solid #2b6ca3
         cursor: pointer
+
 .logo__img
   object-fit: contain
   max-height: 100%
+
+.burger-menu
+  display: none
+  align-self: center
+  &._disabled
+    pointer-events: none
+  @media screen and (max-width: 767px)
+    display: block
+    position: relative
+    width: rem(30)
+    height: rem(18)
+    cursor: pointer
+    padding: 0 rem(1)
+    >div
+      z-index: 10
+      position: absolute
+      left: 0
+      width: 100%
+      height: 10%
+      transition: all 0.3s ease
+      background-color: #fafafa
+      // background-color: #2b6ca3
+      &:first-child,
+      &:last-child
+        content: ""
+      &:first-child
+        top: 0
+        border: 1px solid #f2bf5e
+      &:last-child
+        bottom: 0
+        border: 1px solid #f2bf5e
+      &:nth-child(2)
+        top: 50%
+        border: 1px solid #f2bf5e
+        transform: scale(1) translate(0px, -50%)
+      &._active
+        background-color: #2b6ca3
+        transition: all 0.5s ease
+        &:first-child
+          top: 50%
+          transform: rotate(45deg)
+        &:last-child
+          top: 50%
+          transform: rotate(-45deg)
+        &:nth-child(2)
+          display: none
