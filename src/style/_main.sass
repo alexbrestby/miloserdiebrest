@@ -3,8 +3,11 @@
   flex-direction: column
   align-items: center
   flex: 1 1 auto
-  // padding: rem(40) 20px 20px 20px
   padding: rem(40) rem(5) rem(20)
+  &._active
+    z-index: -1
+  @media screen and (max-width: 767px)
+    margin-top: rem(40)
 
 .main-top
   display: flex
