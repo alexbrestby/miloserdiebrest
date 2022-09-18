@@ -114,29 +114,30 @@
   color: #ffffff
   text-decoration: none
   font-weight: 500
+  &::before
+    content: ""
+    position: absolute
+    width: 0
+    height: 10%
+    bottom: -2px
+    display: inline-block
+    background-color: #fafafa
+    transition: width 0.5s ease
+    @media screen and (max-width: 767px)
+      background-color: #f2bf5e
   &:hover
     color: #f2bf5e
-    transform-origin: bottom right
     transition: transform 0.25s ease-out
+    cursor: pointer
     &::before
-      display: inline
+      width: 100%
       background-color: #f2bf5e
       @media screen and (max-width: 767px)
         background-color: #2b6ca3
   @media screen and (max-width: 767px)
     color: #2b6ca3
     &:hover
-      cursor: pointer
       color: #f2bf5e
-  &::before
-    content: ""
-    position: absolute
-    width: 100%
-    height: 10%
-    bottom: -2px
-    display: none
-    @media screen and (max-width: 767px)
-      background-color: #f2bf5e
 
 .logo__img
   object-fit: contain
@@ -145,6 +146,7 @@
 .burger-menu
   display: none
   align-self: center
+  z-index: 5
   &._disabled
     pointer-events: none
   @media screen and (max-width: 767px)
@@ -153,7 +155,7 @@
     width: rem(30)
     height: rem(18)
     cursor: pointer
-    padding: 0 rem(1)
+    padding: rem(2)
     >div
       z-index: 10
       position: absolute

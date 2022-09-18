@@ -81,7 +81,7 @@ burgerMenu.addEventListener("click", function (e) {
   if (mainPage && !mainPage.classList.contains("_active")) {
     mainPage.classList.add("_active");
   }
-  else {
+  else if (mainPage) {
     setTimeout(() => {
       mainPage.classList.remove("_active");
     }, 1000);
