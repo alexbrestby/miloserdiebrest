@@ -23,7 +23,6 @@ for (let i = 0; i < 6; i++) {
   cardSliderItemImage.alt = cardSliderItemLinksArray[i];
   cardSliderItemLink.appendChild(cardSliderItemImage);
 
-
   let cardSliderItemTitle = document.createElement("h2");
   cardSliderItemTitle.classList.add("card-item__title");
   cardSliderItemTitle.innerHTML = `${cardSliderItemTitlesArray[i]}`;

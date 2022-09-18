@@ -2,27 +2,44 @@
   display: flex
   justify-content: center
   margin-top: rem(20)
+  position: relative
   width: 100%
 
 .cards-slider
   display: flex
+  border: 3px solid #689FDA
+  border-radius: rem(10)
   justify-content: center
   position: relative
   align-items: center
   width: 100%
+  padding: rem(15)
+  // background-color: rgba(43, 108, 163, 1)
   .slick-arrow
     border-radius: 50%
     background-color: #ffffff
     color: #2b6ca3
     transition: all 0.2s ease-out
+    border: 3px solid #2b6ca3
+    padding: rem(1)
     @media screen and (max-width: 768px)
       display: none!important
     &:hover
       cursor: pointer
-      transform: scale(1.2)
+      transform: scale(1.1)
       box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px
       transition: all 0.2s ease-out
       background-color: #f2bf5e
+
+.slick-dots
+  position: absolute
+  bottom: rem(-75)
+  transform: rotate(-90deg)
+  color: #2b6ca3
+  button
+    display: none
+  .slick-active
+    color: #f2bf5e
 
 .cards-slider__item
   display: flex
@@ -30,7 +47,10 @@
   text-align: center
   height: rem(350)
   margin: 0 rem(10)
-  border: 3px solid #2b6ca3
+  // border: 3px solid #2b6ca3
+  border: 3px solid #f2bf5e
+  background-color: #ffffff
+
   border-radius: 5px
   a
     text-decoration: none
@@ -38,7 +58,7 @@
       >.card-item__title
         color: #f2bf5e
   img
-    width: calc(100% - 8px)
+    width: calc(100% - 10px)
     max-height: 100%
     height: 60%
     object-fit: cover
